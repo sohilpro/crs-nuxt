@@ -1,0 +1,37 @@
+[
+  {
+    "Code": "TBZ",
+    "Name": "Tabriz",
+    "Country_Name": "Iran"
+  },
+  {
+    "Code": "MHD",
+    "Name": "Mashhad",
+    "Country_Name": "Iran"
+  },
+  {
+    "Code": "THR",
+    "Name": "Tehran",
+    "Country_Name": "Iran"
+  },
+  {
+    "Code": "Ahwaz",
+    "Name": "AWZ",
+    "Country_Name": "Iran"
+  },
+  {
+    "Code": "KIH",
+    "Name": "Kish",
+    "Country_Name": "Iran"
+  },
+  {
+    "Code": "BGW",
+    "Name": "Baghdad",
+    "Country_Name": "Iraq"
+  },
+  {
+    "Code": "NJF",
+    "Name": "Najaf",
+    "Country_Name": "Iraq"
+  }
+]

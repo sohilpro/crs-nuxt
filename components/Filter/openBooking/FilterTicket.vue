@@ -1,0 +1,478 @@
+<template>
+  <div
+    @click="openFilterFN"
+    class="bg-white lg:hidden cursor-pointer flex gap-2 items-center shadow rounded-2xl mb-4 font-semibold p-4"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1.5rem"
+      height="1.5rem"
+      viewBox="0 0 20 20"
+    >
+      <path
+        fill="currentColor"
+        d="M7.5 13h5a.5.5 0 0 1 .09.992L12.5 14h-5a.5.5 0 0 1-.09-.992zh5zm-2-4h9a.5.5 0 0 1 .09.992L14.5 10h-9a.5.5 0 0 1-.09-.992zh9zm-2-4h13a.5.5 0 0 1 .09.992L16.5 6h-13a.5.5 0 0 1-.09-.992zh13z"
+      />
+    </svg>
+    <span class="text-lg">Filter</span>
+  </div>
+  <TransitionFade>
+    <div v-if="openFilter" class="fixed top-0 z-[9999] w-full h-full bg-white">
+      <main class="flex flex-col p-5 rounded-xl">
+        <div class="flex pb-5 justify-between items-center">
+          <div
+            @click="closeFilterFN"
+            class="flex cursor-pointer items-center gap-1"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1.3rem"
+              height="1.3rem"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12z"
+              />
+            </svg>
+            <span>Filters</span>
+          </div>
+
+          <span
+            @click="closeFilterFN"
+            class="text-blue-600 cursor-pointer underline"
+            >Clear</span
+          >
+        </div>
+        <ul class="space-y-3 mt-2">
+          <li>
+            <div
+              class="flex cursor-pointer rounded-md transition-all hover:transition-all items-center justify-between"
+              @click="priceFilter = !priceFilter"
+            >
+              <div class="flex gap-2 items-center">
+                <button type="button">
+                  <span class="font-semibold text-lg">Price Filter</span>
+                </button>
+              </div>
+              <div
+                class="text-blue-600 text-xl transition-all duration-500"
+                :class="{ 'rotate-180': priceFilter }"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path
+                      d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M12.707 15.707a1 1 0 0 1-1.414 0L5.636 10.05A1 1 0 1 1 7.05 8.636l4.95 4.95l4.95-4.95a1 1 0 0 1 1.414 1.414z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <TransitionExpand>
+              <KeepAlive>
+                <UtilsSlider v-if="priceFilter" />
+              </KeepAlive>
+            </TransitionExpand>
+          </li>
+          <li>
+            <div
+              class="flex cursor-pointer rounded-md transition-all hover:transition-all items-center justify-between"
+              @click="stop = !stop"
+            >
+              <div class="flex gap-2 items-center">
+                <button type="button">
+                  <span class="font-semibold text-lg">Stop</span>
+                </button>
+              </div>
+              <div
+                class="text-blue-600 text-xl transition-all duration-500"
+                :class="{ 'rotate-180': stop }"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path
+                      d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M12.707 15.707a1 1 0 0 1-1.414 0L5.636 10.05A1 1 0 1 1 7.05 8.636l4.95 4.95l4.95-4.95a1 1 0 0 1 1.414 1.414z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <TransitionExpand>
+              <div v-if="stop" class="flex mt-2.5 flex-col">
+                <div class="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"
+                  />
+                  <span>Non stop</span>
+                </div>
+                <div class="flex gap-10">
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"
+                    />
+                    <span>1 stops</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"
+                    />
+                    <span>2 stops</span>
+                  </div>
+                </div>
+              </div>
+            </TransitionExpand>
+          </li>
+          <li>
+            <div
+              class="flex cursor-pointer rounded-md transition-all hover:transition-all items-center justify-between"
+              @click="flightType = !flightType"
+            >
+              <div class="flex gap-2 items-center">
+                <button type="button">
+                  <span class="font-semibold text-lg">Flight Type</span>
+                </button>
+              </div>
+              <div
+                class="text-blue-600 text-xl transition-all duration-500"
+                :class="{ 'rotate-180': flightType }"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path
+                      d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M12.707 15.707a1 1 0 0 1-1.414 0L5.636 10.05A1 1 0 1 1 7.05 8.636l4.95 4.95l4.95-4.95a1 1 0 0 1 1.414 1.414z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <TransitionExpand>
+              <div v-if="flightType" class="flex mt-2.5 flex-col">
+                <div class="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"
+                  />
+                  <span>Economy</span>
+                </div>
+                <div class="flex gap-10">
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"
+                    />
+                    <span>Business class</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"
+                    />
+                    <span>First class</span>
+                  </div>
+                </div>
+              </div>
+            </TransitionExpand>
+          </li>
+          <li>
+            <div
+              class="flex cursor-pointer rounded-md transition-all hover:transition-all items-center justify-between"
+              @click="ticketType = !ticketType"
+            >
+              <div class="flex gap-2 items-center">
+                <button type="button">
+                  <span class="font-semibold text-lg">Ticket Type</span>
+                </button>
+              </div>
+              <div
+                class="text-blue-600 text-xl transition-all duration-500"
+                :class="{ 'rotate-180': ticketType }"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path
+                      d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M12.707 15.707a1 1 0 0 1-1.414 0L5.636 10.05A1 1 0 1 1 7.05 8.636l4.95 4.95l4.95-4.95a1 1 0 0 1 1.414 1.414z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <TransitionExpand>
+              <div v-if="ticketType" class="flex mt-2.5 flex-col">
+                <div class="flex gap-10">
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"
+                    />
+                    <span>System</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"
+                    />
+                    <span>Charter</span>
+                  </div>
+                </div>
+              </div>
+            </TransitionExpand>
+          </li>
+          <li>
+            <div
+              class="flex cursor-pointer rounded-md transition-all hover:transition-all items-center justify-between"
+              @click="period = !period"
+            >
+              <div class="flex gap-2 items-center">
+                <button type="button">
+                  <span class="font-semibold text-lg">Period</span>
+                </button>
+              </div>
+              <div
+                class="text-blue-600 text-xl transition-all duration-500"
+                :class="{ 'rotate-180': period }"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path
+                      d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M12.707 15.707a1 1 0 0 1-1.414 0L5.636 10.05A1 1 0 1 1 7.05 8.636l4.95 4.95l4.95-4.95a1 1 0 0 1 1.414 1.414z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <TransitionExpand>
+              <div v-if="period" class="flex mt-2.5 flex-col">
+                <div class="flex justify-between items-center gap-2">
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"
+                    />
+                    <span>Morning</span>
+                  </div>
+                  <span>0-6</span>
+                </div>
+                <div class="flex justify-between items-center gap-2">
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"
+                    />
+                    <span>Noon</span>
+                  </div>
+                  <span>6-12</span>
+                </div>
+                <div class="flex justify-between items-center gap-2">
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"
+                    />
+                    <span>Afternoon</span>
+                  </div>
+                  <span>12-18</span>
+                </div>
+                <div class="flex justify-between items-center gap-2">
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"
+                    />
+                    <span>Night</span>
+                  </div>
+                  <span>18-24</span>
+                </div>
+              </div>
+            </TransitionExpand>
+          </li>
+          <li>
+            <div
+              class="flex cursor-pointer rounded-md transition-all hover:transition-all items-center justify-between"
+              @click="airLine = !airLine"
+            >
+              <div class="flex gap-2 items-center">
+                <button type="button">
+                  <span class="font-semibold text-lg">Airline</span>
+                </button>
+              </div>
+              <div
+                class="text-blue-600 text-xl transition-all duration-500"
+                :class="{ 'rotate-180': airLine }"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="none" fill-rule="evenodd">
+                    <path
+                      d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"
+                    />
+                    <path
+                      fill="currentColor"
+                      d="M12.707 15.707a1 1 0 0 1-1.414 0L5.636 10.05A1 1 0 1 1 7.05 8.636l4.95 4.95l4.95-4.95a1 1 0 0 1 1.414 1.414z"
+                    />
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <TransitionExpand>
+              <div v-if="airLine" class="flex mt-2.5 flex-col gap-2.5">
+                <div
+                  v-for="(item, index) in 6"
+                  :key="index"
+                  class="flex justify-between items-center gap-2"
+                >
+                  <div class="flex items-center gap-2">
+                    <input
+                      type="checkbox"
+                      class="relative peer shrink-0 w-5 h-5 border-2 border-blue-500 rounded-lg bg-white checked:bg-blue-800 checked:border-0 focus:outline-none focus:ring-offset-0 focus:ring-2 focus:ring-blue-100 disabled:border-steel-400 disabled:bg-steel-400"
+                    />
+                    <span>Airline name</span>
+                  </div>
+                  <main class="bg-orange-100 rounded-full p-2">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 128 128"
+                    >
+                      <path
+                        fill="#006ca8"
+                        d="M37.08 80.79S9.61 74.92 9.14 75.01c-.47.09-5.97 5.59-5.78 6.44C3.55 82.31 27.61 95 27.61 95l6.91-7.29zm-3.79 19.42s13.35 23.11 13.92 23.11s6.72-4.74 6.72-5.21c0-.47-5.68-28.03-5.68-28.03l-9.76 1.14z"
+                      />
+                      <path
+                        fill="#9a9a9a"
+                        d="M22.79 25.78s-1.92 2.17-2.33 2.94s-.48 2.09.4 2.56c.88.47 1.95.15 2.48-.44s3.14-3.8 3.14-3.8s-3.46-1.44-3.69-1.26m14.02 7.85s-1.55 1.84-2.18 2.68c-.61.81-.6 2.08.25 2.68c1.22.86 2.43-.1 3.09-.81c.61-.66 2.33-2.68 2.33-2.68zm13.27 7.14s-2.03 2.03-2.63 2.84c-.67.89-.82 2.19.1 2.89c1.01.76 2.13.41 3.04-.41c.91-.81 2.94-3.04 2.94-3.04zm35.03 34.28s-2.38 1.65-2.97 2.29c-.58.64-.97 1.92-.22 2.59c.74.67 1.86.61 2.52.17c.66-.44 3.96-2.93 3.96-2.93s-3.02-2.23-3.29-2.12m8.02 12.56s-1.97 1.38-2.79 2.03c-.8.63-1.11 1.86-.44 2.66c.95 1.14 2.38.53 3.19.01c.76-.48 2.94-2 2.94-2zm7.34 12.84s-2.45 1.48-3.24 2.12c-.86.71-1.32 1.93-.59 2.83c.8.98 1.97.9 3.05.34s3.58-2.24 3.58-2.24zm-43.2-76.72s-.35-2.33 1.54-4.96c1.89-2.63 8.16-8.77 9.13-8.82s3.29 1.18 5.62 3.47c2.22 2.17 3.25 4.96 3.29 5.62c.04.66-4.34 5-5.48 6.05c-1.14 1.05-4.21 4.47-4.21 4.47z"
+                      />
+                      <path
+                        fill="#c8c8c8"
+                        d="M60.13 24.08s7.68-9.39 9.74-7.98c2.08 1.42-6.23 9.48-6.23 9.48z"
+                      />
+                      <path
+                        fill="#848484"
+                        d="M58.37 23.48s4.35-4.41 4.83-5.11c.48-.7.04-1.75-.35-2.33c-.39-.57-.99-.79-.99-.79s-3.07 2.75-4.12 5.16c-.82 1.87-.68 2.82-.68 2.82zm7.49 2.27s1.65-1.71 2.48-2.39c.75-.61 1.86-.55 2.52-.16c.85.5 1.05 1.36 1.05 1.36l-3.06 3.25z"
+                      />
+                      <path
+                        fill="#9a9a9a"
+                        d="M101.96 59.45s2.51-2.92 3.97-4.38c1.51-1.51 3.97-3.56 4.47-3.52c.5.05 2.71 1.39 4.79 3.52c2.37 2.42 3.84 5.43 3.88 5.71c.05.27-4.38 4.7-6.35 6.39c-1.41 1.21-10.18 4.79-10.18 4.34c.02-.46-.58-12.06-.58-12.06"
+                      />
+                      <path
+                        fill="#c8c8c8"
+                        d="M103.41 65.1s7.26-7.96 8.92-6.47c1.66 1.49-8.31 10.45-8.31 10.45z"
+                      />
+                      <path
+                        fill="#848484"
+                        d="m102.87 63.1l2.65-2.92c.94-1.03.88-2.41.6-3.01c-.36-.77-1.29-.95-1.29-.95l-3.45 3.67zm2.51 6.61s4.16-3.75 4.87-4.34c.71-.59 1.86-1.01 2.77-.38c.68.47.98 1.04.98 1.04s-3.2 3.48-5.13 4.71c-1.21.77-4.07 1.21-4.07 1.21z"
+                      />
+                      <path
+                        fill="#006ca8"
+                        d="M11.65 8.92c-.98.08-7.19 7.42-7.41 7.96s0 1.42 1.53 2.18c1.52.76 44.47 23.44 45.13 23.98c.65.55 9.16 10.03 9.16 10.03s21.04-14.5 20.93-14.93c-.11-.44-.76-9.48-.76-9.48S13.07 8.81 11.65 8.92m61.38 56.91s12.86 11.66 13.95 13.08c1.09 1.42 23.33 41.97 23.66 42.62c.33.65 1.74 1.2 2.51.44s6.54-5.78 6.65-6.98c.11-1.2-21.37-70.42-21.37-70.42l-16.57 6z"
+                      />
+                      <path
+                        fill="#014eac"
+                        d="M66.81 43.26s-10.14-9.81-10.9-10.36c-.76-.54-48.29-20.16-48.29-20.16l-1.95 2.15s48.18 20.35 48.95 20.89c.77.54 10.2 10.2 10.2 10.2zM82.4 60.45s11.17 13.72 11.84 14.61s20.26 45.65 20.26 45.65l1.95-1.82S96.88 73.22 96.53 72.6c-.35-.62-13.36-16.7-13.36-16.7z"
+                      />
+                      <path
+                        fill="#9a9a9a"
+                        d="M24.22 98.4s-4.18 5.98-4.18 6.45c0 .48 2.8 3.54 3.12 3.54s6.4-4.34 6.4-4.34l-.85-4.34z"
+                      />
+                      <path
+                        fill="#c8c8c8"
+                        d="M24.22 98.4s8.28-13.93 17.15-26.38c9.11-12.79 16.5-20.16 27.86-32.52C83.48 24 92.97 15.22 101.75 9.31c7.28-4.9 17.68-8.22 21.39-4.91c4.07 3.64-.42 15.12-4.99 21.66c-10.37 14.84-19.27 21.9-29.48 31.81c-10.07 9.77-18.58 18.25-29.12 26.16c-7.1 5.33-30 20.04-30 20.04z"
+                      />
+                      <path
+                        fill="#3b5361"
+                        d="m103.92 11.05l2.77 2.92s4.64-4.47 8.11-1.14c3.56 3.41-1.35 8.25-1.35 8.25l2.99 3.34s8.11-9.18 1.49-15.15c-5.76-5.2-14.01 1.78-14.01 1.78"
+                      />
+                      <path
+                        fill="#9a9a9a"
+                        d="M47.84 74c-1.29 1.24-16.53 19.28-17.38 20.35c-1.09 1.38-1.59 3.04-.36 4.06c1.23 1.01 2.56.01 3.77-.8c1.52-1.01 19.18-16.59 20.35-17.67c1.88-1.74 2.2-4.88.22-6.66c-2.18-1.96-4.64-1.16-6.6.72"
+                      />
+                      <path
+                        fill="#dfdfdf"
+                        d="M47.29 69.91c-.87-.75-1.95-.25-3.09.98c-.98 1.07-1.43 2.73-.45 3.4c.98.67 2.28-.31 3.09-1.3c.81-.98 1.43-2.23.45-3.08m2.82-5.82c-.9 1.03-2.21 2.73-.98 3.94c1.21 1.19 3.04-.32 3.84-1.22c.79-.9 9.84-11.52 21.29-22.96c11.18-11.18 18.7-18.25 19.86-19.49c.98-1.05.89-2.72.03-3.25c-1.02-.63-2.15-.23-3.55 1.17S79.7 32.37 70.74 41.43S51.23 62.8 50.11 64.09"
+                      />
+                      <path
+                        fill="#3b5361"
+                        d="M105.47 41.61s-.55-3.72-2.86-2.26c-2.48 1.57-.63 5.83-.63 5.83s.93-.87 1.92-1.91c.82-.85 1.3-1.35 1.57-1.66m-8.87 8.75s-.39-4.77-3.01-2.81c-2.09 1.57-.67 6.26-.67 6.26s1.2-1.09 1.98-1.83c.79-.75 1.7-1.62 1.7-1.62m-8.46 8.02s-.3-3.96-2.65-2.65s-.78 5.99-.78 5.99s1.04-.94 1.74-1.64s1.69-1.7 1.69-1.7m-9.58 9.26s-.18-3.94-2.49-2.89c-2.4 1.09-.96 6.14-.96 6.14s1.17-1.09 1.82-1.7c.66-.6 1.63-1.55 1.63-1.55"
+                      />
+                    </svg>
+                  </main>
+                </div>
+              </div>
+            </TransitionExpand>
+          </li>
+        </ul>
+      </main>
+    </div>
+  </TransitionFade>
+</template>
+
+<script setup>
+const openFilter = ref(false);
+const priceFilter = ref(false);
+const stop = ref(false);
+const flightType = ref(false);
+const ticketType = ref(false);
+const period = ref(false);
+const airLine = ref(false);
+
+const openFilterFN = () => {
+  openFilter.value = true;
+  document.querySelector("body").classList.add("overflow-hidden");
+};
+const closeFilterFN = () => {
+  openFilter.value = false;
+  document.querySelector("body").classList.remove("overflow-hidden");
+};
+</script>

@@ -1,0 +1,207 @@
+{
+  "navBar": {
+    "login": "تسجیل الدخول",
+    "signup": "اشتراک",
+    "language": {
+      "en": "English",
+      "fa": "Perisan",
+      "ar": "Arabic",
+      "zh": "Chinese",
+      "ku": "Kurdish",
+      "de": "Germany"
+    },
+    "currency": {
+      "USD": "الدولار الأمريكي",
+      "EUR": "یورو",
+      "Rial": "الريال الإيراني",
+      "JOB": "الدينار الأردني",
+      "OMR": "الريال العماني",
+      "IQD": "الدينار العراقي"
+    }
+  },
+  "Banner": {
+    "title": "هذا النص للاختبار فقط",
+    "description": "هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار",
+    "button": {
+      "flight": "رحلة جوية",
+      "hotel": "فندوق",
+      "visa": "ویزا",
+      "tour": "تور",
+      "insurance": "تأمين"
+    }
+  },
+
+  "Booking": {
+    "oneway": "طريقة واحدة",
+    "roundtrip": "ذهاب و ایاب",
+    "multicity": "مدينة متعددة",
+    "search": "يبحث",
+    "Boxs": {
+      "origin": {
+        "title": "أصل",
+        "subtitle": "طهران",
+        "body": "إيران، طهران (IMK)"
+      },
+      "destination": {
+        "title": "وجهة",
+        "subtitle": "طهران",
+        "body": "كندا، تورنتو (IMK)"
+      },
+      "departure-date": {
+        "title": "موعد ذهابًا وإيابًا"
+      }
+    }
+  },
+
+  "SwiperMain": {
+    "title": "أعلى الوكالات",
+    "name": "اسم المکتب",
+    "description": "هذا هو السبب الرئيسي للاختبار"
+  },
+
+  "nowBook": {
+    "title": "حلم السفر إلى اسطنبول",
+    "description": "هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار هذا نص اختبار",
+    "btn": "احجز الآن"
+  },
+
+  "fastsearch": {
+    "title": "بحث سريع",
+    "titleOption": "أصل",
+    "options": {
+      "hotel": "فندوق"
+    },
+    "card": {
+      "name": "استانبول",
+      "option": {
+        "hotel": "فندوق",
+        "flight": "رحلة جوية",
+        "tour": "تور"
+      }
+    }
+  },
+
+  "visa": {
+    "title": "ویزا",
+    "titleOption": "ویزا عمان",
+    "time": "30 یوم",
+    "price": "الدولار",
+    "timeOption": {
+      "25d": "25 یوم",
+      "30d": "30 یوم"
+    }
+  },
+
+  "tour": {
+    "title": "تور",
+    "seeall": "اظهار الكل"
+  },
+
+  "filter": {
+    "Booking": {
+      "oneway": "One Way",
+      "roundtrip": "Round trip",
+      "multicity": "Multi-city",
+      "person": {
+        "adult": "Adult",
+        "child": "Child",
+        "infant": "Infant",
+        "btn": {
+          "confirm": "Confirm",
+          "cancel": "Cancel"
+        }
+      },
+      "classic": {
+        "economy": "Economy",
+        "premium-economy": "Premium Economy",
+        "business-class": "Business class",
+        "first-class": "First class",
+        "btn": {
+          "confirm": "Confirm",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "filterCard": {
+      "filters": "Filters",
+      "clear": "Clear",
+      "price_filter": {
+        "name": "Price Filter",
+        "from": "From",
+        "to": "To"
+      },
+      "stop": {
+        "name": "Stop",
+        "nonStop": "Non stop",
+        "1stop": "1 stops",
+        "2stop": "2 stops"
+      },
+      "flight_type": {
+        "name": "Flight Type",
+        "economy": "Economy",
+        "business-class": "Business class",
+        "first-class": "First class"
+      },
+      "ticket_type": {
+        "name": "Ticket Type",
+        "system": "System",
+        "charter": "Charter"
+      },
+      "period": {
+        "name": "Period",
+        "morning": "Morning",
+        "noon": "Noon",
+        "afternoon": "Afternoon",
+        "night": "Night"
+      },
+      "airline": {
+        "name": "Airline",
+        "option": {
+          "name": "Airline name"
+        }
+      }
+    },
+    "other": {
+      "recomended": "Recomended",
+      "cheapset": "Cheapset",
+      "fastest": "Fastest",
+      "other": "Other",
+      "sponsered": "Sponsered",
+      "ticket": {
+        "from_name": "Mahan",
+        "to_name": "Baghdad",
+        "oneStop": "One stop",
+        "btn": "View Detail",
+        "sites": "sites remind",
+        "details": {
+          "title": "Tehran (IMK) to Torento(YYZ)"
+        }
+      }
+    }
+  },
+
+  "footer": {
+    "ourservice": {
+      "title": "خدماتنا",
+      "flight": "رحلة جوية",
+      "hotel": "فندوق",
+      "tour": "تور",
+      "visa": "ویزا",
+      "insurance": "تأمين"
+    },
+    "fast-service": {
+      "title": "بحث سريع",
+      "op1": "طهران إلى اسطنبول",
+      "op2": "دبي إلى النجف",
+      "op3": " أصفهان إلى جزيرة كيش",
+      "op4": "بغداد إلى طهران",
+      "op5": "دبي إلى لوس أنجلوس",
+      "op6": "النجف الی دبی",
+      "op7": "طهران الی بغداد ",
+      "op8": "لوس انجلوس الی دبی",
+      "op9": "جزيرة کیش الی اصفهان ",
+      "op10": "استانبول الی طهران"
+    },
+    "copyright": "جميع حقوق هذه الخدمات (موقع الويب وتطبيقات الهاتف المحمول) محفوظة ومملوكة لشركة سی ار استریب"
+  }
+}

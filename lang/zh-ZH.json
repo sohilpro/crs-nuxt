@@ -1,0 +1,207 @@
+{
+  "navBar": {
+    "login": "Log in",
+    "signup": "Sign up",
+    "language": {
+      "en": "English",
+      "fa": "Perisan",
+      "ar": "Arabic",
+      "zh": "Chinese",
+      "ku": "Kurdish",
+      "de": "Germany"
+    },
+    "currency": {
+      "USD": "US Dollar",
+      "EUR": "Euro",
+      "Rial": "Iranian Rial",
+      "JOB": "Jordanian Dinar",
+      "OMR": "Omany Riyal",
+      "IQD": "Iraqi Dinar"
+    }
+  },
+  "Banner": {
+    "title": "This text is just for test",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud .",
+    "button": {
+      "flight": "Flight",
+      "hotel": "Hotel",
+      "visa": "Visa",
+      "tour": "Tour",
+      "insurance": "Insurance"
+    }
+  },
+
+  "Booking": {
+    "oneway": "One Way",
+    "roundtrip": "Round trip",
+    "multicity": "Multi-city",
+    "search": "Search",
+    "Boxs": {
+      "origin": {
+        "title": "Origin",
+        "subtitle": "Tehran",
+        "body": "Iran, Tehran (IMK)"
+      },
+      "destination": {
+        "title": "Destination",
+        "subtitle": "Tehran",
+        "body": "Canada, Torento (IMK)"
+      },
+      "departure-date": {
+        "title": "Departure Date"
+      }
+    }
+  },
+
+  "SwiperMain": {
+    "title": "Top Agencies",
+    "name": "Agency Name",
+    "description": " Lorem ipsum dolor sit amet, consectetur"
+  },
+
+  "nowBook": {
+    "title": "Dream Travel To Istanbul",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.",
+    "btn": "Book now"
+  },
+
+  "fastsearch": {
+    "title": "Fast search",
+    "titleOption": "Origin",
+    "options": {
+      "hotel": "Hotel"
+    },
+    "card": {
+      "name": "Istanbul",
+      "option": {
+        "hotel": "Hotel",
+        "flight": "Flight",
+        "tour": "Tour"
+      }
+    }
+  },
+
+  "visa": {
+    "title": "Visa",
+    "titleOption": "Oman Visa",
+    "time": "30 day",
+    "price": "USD",
+    "timeOption": {
+      "25d": "25 Days",
+      "30d": "30 Days"
+    }
+  },
+
+  "tour": {
+    "title": "Tour",
+    "seeall": "See all"
+  },
+
+  "filter": {
+    "Booking": {
+      "oneway": "One Way",
+      "roundtrip": "Round trip",
+      "multicity": "Multi-city",
+      "person": {
+        "adult": "Adult",
+        "child": "Child",
+        "infant": "Infant",
+        "btn": {
+          "confirm": "Confirm",
+          "cancel": "Cancel"
+        }
+      },
+      "classic": {
+        "economy": "Economy",
+        "premium-economy": "Premium Economy",
+        "business-class": "Business class",
+        "first-class": "First class",
+        "btn": {
+          "confirm": "Confirm",
+          "cancel": "Cancel"
+        }
+      }
+    },
+    "filterCard": {
+      "filters": "Filters",
+      "clear": "Clear",
+      "price_filter": {
+        "name": "Price Filter",
+        "from": "From",
+        "to": "To"
+      },
+      "stop": {
+        "name": "Stop",
+        "nonStop": "Non stop",
+        "1stop": "1 stops",
+        "2stop": "2 stops"
+      },
+      "flight_type": {
+        "name": "Flight Type",
+        "economy": "Economy",
+        "business-class": "Business class",
+        "first-class": "First class"
+      },
+      "ticket_type": {
+        "name": "Ticket Type",
+        "system": "System",
+        "charter": "Charter"
+      },
+      "period": {
+        "name": "Period",
+        "morning": "Morning",
+        "noon": "Noon",
+        "afternoon": "Afternoon",
+        "night": "Night"
+      },
+      "airline": {
+        "name": "Airline",
+        "option": {
+          "name": "Airline name"
+        }
+      }
+    },
+    "other": {
+      "recomended": "Recomended",
+      "cheapset": "Cheapset",
+      "fastest": "Fastest",
+      "other": "Other",
+      "sponsered": "Sponsered",
+      "ticket": {
+        "from_name": "Mahan",
+        "to_name": "Baghdad",
+        "oneStop": "One stop",
+        "btn": "View Detail",
+        "sites": "sites remind",
+        "details": {
+          "title": "Tehran (IMK) to Torento(YYZ)"
+        }
+      }
+    }
+  },
+
+  "footer": {
+    "ourservice": {
+      "title": "Our Services",
+      "flight": "Flight",
+      "hotel": "Hotel",
+      "tour": "Tour",
+      "visa": "Visa",
+      "insurance": "Insurance"
+    },
+    "fast-service": {
+      "title": "Fast Search",
+      "op1": "Tehran to Istanbul",
+      "op2": "Dubai to Najaf",
+      "op3": "Isfahan to Kish Island",
+      "op4": "Baghdad to Tehran",
+      "op5": "Dubai to Los Angeles",
+      "op6": "Dubai to Najaf",
+      "op7": "Baghdad to Tehran",
+      "op8": "Dubai to Los Angeles",
+      "op9": "Isfahan to Kish Island",
+      "op10": "Tehran to Istanbul"
+    },
+    "copyright": "All rights to these services (website and mobile application) are reserved and owned by CRSTRIP"
+  }
+}

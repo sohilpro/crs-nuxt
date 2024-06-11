@@ -1,0 +1,208 @@
+{
+    "navBar": {
+      "login": "ورود",
+      "signup": "ثبت نام",
+      "language": {
+        "en": "English",
+        "fa": "Perisan",
+        "ar": "Arabic",
+        "zh": "Chinese",
+        "ku": "Kurdish",
+        "de": "Germany"
+      },
+      "currency": {
+        "USD": "دلار امریکا",
+        "EUR": "یورو",
+        "Rial": "ریال ایران",
+        "JOB": "دینار اردن",
+        "OMR": "ریال عمان",
+        "IQD": "دینار عراق"
+      }
+    },
+    "Banner": {
+      "title": "این متن فقط برای تست است",
+      "description": "این متن تست می باشد این متن تست می باشد این متن تست می باشد این متن تست می باشد این متن تست می باشد این متن تست می باشد این متن تست می باشد این متن تست می باشد",
+      "button": {
+        "flight": "پرواز",
+        "hotel": "هتل",
+        "visa": "ویزا",
+        "tour": "تور",
+        "insurance": "بیمه"
+      }
+    },
+  
+    "Booking": {
+      "oneway": "یک طرفه",
+      "roundtrip": "رفت و برگشت",
+      "multicity": "چند شهر",
+      "search": "جستجو",
+      "Boxs": {
+        "origin": {
+          "title": "مبدا",
+          "subtitle": "تهران",
+          "body": "ایران، تهران (IMK)"
+        },
+        "destination": {
+          "title": "مقصد",
+          "subtitle": "تهران",
+          "body": "کانادا، تورنتو (IMK)"
+        },
+        "departure-date": {
+          "title": "تاریخ رفت"
+        }
+      }
+    },
+  
+    "SwiperMain": {
+      "title": "اژانس های برتر",
+      "name": "نام اژانس",
+      "description": "این متن برای تست میباشد"
+    },
+  
+    "nowBook": {
+      "title": "سفر رویایی به استانبول",
+      "description": "این متن تست می باشد این متن تست می باشد این متن تست می باشد این متن تست می باشد این متن تست می باشد این متن تست می باشد این متن تست می باشد این متن تست می باشد",
+      "btn": "اکنون ثبت کنید"
+    },
+  
+    "fastsearch": {
+      "title": "جستجوی سریع",
+      "titleOption": "مبدا",
+      "options": {
+        "hotel": "هتل"
+      },
+      "card": {
+        "name": "استانبول",
+        "option": {
+          "hotel": "هتل",
+          "flight": "پرواز",
+          "tour": "تور"
+        }
+      }
+    },
+  
+    "visa": {
+      "title": "ویزا",
+      "titleOption": "ویزای عمان",
+      "time": "30 روز",
+      "price": "دلار امریکا",
+      "timeOption": {
+        "25d": "25 روز",
+        "30d": "30 روز"
+      }
+    },
+  
+    "tour": {
+      "title": "تور",
+      "seeall": "دیدن همه"
+    },
+
+    "filter": {
+      "Booking": {
+        "oneway": "One Way",
+        "roundtrip": "Round trip",
+        "multicity": "Multi-city",
+        "person": {
+          "adult": "Adult",
+          "child": "Child",
+          "infant": "Infant",
+          "btn": {
+            "confirm": "Confirm",
+            "cancel": "Cancel"
+          }
+        },
+        "classic": {
+          "economy": "Economy",
+          "premium-economy": "Premium Economy",
+          "business-class": "Business class",
+          "first-class": "First class",
+          "btn": {
+            "confirm": "Confirm",
+            "cancel": "Cancel"
+          }
+        }
+      },
+      "filterCard": {
+        "filters": "Filters",
+        "clear": "Clear",
+        "price_filter": {
+          "name": "Price Filter",
+          "from": "From",
+          "to": "To"
+        },
+        "stop": {
+          "name": "Stop",
+          "nonStop": "Non stop",
+          "1stop": "1 stops",
+          "2stop": "2 stops"
+        },
+        "flight_type": {
+          "name": "Flight Type",
+          "economy": "Economy",
+          "business-class": "Business class",
+          "first-class": "First class"
+        },
+        "ticket_type": {
+          "name": "Ticket Type",
+          "system": "System",
+          "charter": "Charter"
+        },
+        "period": {
+          "name": "Period",
+          "morning": "Morning",
+          "noon": "Noon",
+          "afternoon": "Afternoon",
+          "night": "Night"
+        },
+        "airline": {
+          "name": "Airline",
+          "option": {
+            "name": "Airline name"
+          }
+        }
+      },
+      "other": {
+        "recomended": "Recomended",
+        "cheapset": "Cheapset",
+        "fastest": "Fastest",
+        "other": "Other",
+        "sponsered": "Sponsered",
+        "ticket": {
+          "from_name": "Mahan",
+          "to_name": "Baghdad",
+          "oneStop": "One stop",
+          "btn": "View Detail",
+          "sites": "sites remind",
+          "details": {
+            "title": "Tehran (IMK) to Torento(YYZ)"
+          }
+        }
+      }
+    },
+  
+    "footer": {
+      "ourservice": {
+        "title": "خدمات ما",
+        "flight": "پرواز",
+        "hotel": "هتل",
+        "tour": "تور",
+        "visa": "ویزا",
+        "insurance": "بیمه"
+      },
+      "fast-service": {
+        "title": "جستجوی سریع",
+        "op1": "تهران به استانبول",
+        "op2": "دبی به نجف",
+        "op3": "اصفهان به جزیره کیش",
+        "op4": "بغداد به تهران",
+        "op5": "دبی به لس آنجلس",
+        "op6": "دبی به نجف ",
+        "op7": "بغداد به تهران",
+        "op8": "لس انجلس به دبی ",
+        "op9": "جزیره کیش به اصفهان",
+        "op10": "تهران به استانبول "
+      },
+      "copyright": "تمامی حقوق این خدمات (وب سایت و اپلیکیشن موبایل) متعلق به سی ار اس تریپ می باشد"
+    }
+  }
+  
