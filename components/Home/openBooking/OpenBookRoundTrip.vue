@@ -260,7 +260,7 @@
         </p>
       </div>
       <div
-        class="absolute bottom-0 left-0 top-16 z-50 h-max w-full bg-white shadow-xl rounded-lg px-4"
+        class="absolute bottom-0 left-0 top-16 z-50 h-max w-full lg:w-72 bg-white shadow-xl rounded-lg px-4"
       >
         <TransitionExpand :duration="500">
           <div
@@ -577,8 +577,8 @@ const handleSearchFlight = () => {
   router.push({
     path: `/${locale.value}/Filter`,
     query: {
-      origin: forSearchOrigin.value.Code,
-      destination: forSearchDest.value.Code,
+      origin: forSearchOrigin.value.departure_code,
+      destination: forSearchDest.value.departure_code,
       departure_date_time: new Date(range.value.start).toISOString(),
       return_date_time: returnDate.value
         ? ""
